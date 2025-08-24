@@ -162,7 +162,7 @@ layers:
   - F10
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+A
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
@@ -197,5 +197,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [1, 15, 29]
-  k: '&soft_off'
+- p: [23, 24]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [24, 25]
+  k: $$mdi:keyboard-esc$$
+- p: [23, 9]
+  k: {t: '-', s: _}
+- p: [23, 10]
+  k: {t: '=', s: +}
