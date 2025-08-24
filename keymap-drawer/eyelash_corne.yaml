@@ -17,14 +17,14 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - D
-  - F
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - H
-  - J
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - K
   - L
   - {t: ;, s: ':'}
@@ -47,10 +47,10 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:apple-keyboard-option$$', h: SYMBOL}
+  - {t: F18, h: SYMBOL}
   - $$mdi:apple-keyboard-option$$
   NUMBER:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -63,12 +63,12 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
   - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - Gui+$$mdi:arrow-left-bold$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -76,7 +76,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - HOME
+  - Gui+$$mdi:arrow-right-bold$$
   - PG UP
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB OFF
@@ -90,16 +90,16 @@ layers:
   - RGB SPI
   - RGB BRI
   - RGB BRD
-  - END
+  - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - INS
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '~'
   - '!'
   - '@'
   - '#'
@@ -125,8 +125,8 @@ layers:
   - {t: '=', s: +}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - {t: \, s: '|'}
-  - {t: '`', s: '~'}
+  - ':'
+  - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - OUT USB
   - OUT BLE
@@ -199,8 +199,6 @@ layers:
 combos:
 - p: [23, 24]
   k: {t: '$$mdi:backspace$$', type: backspace}
-- p: [24, 25]
-  k: $$mdi:keyboard-esc$$
 - p: [23, 9]
   k: {t: '-', s: _}
 - p: [23, 10]
@@ -215,3 +213,11 @@ combos:
   k: (
 - p: [9, 10]
   k: )
+- p: [38, 39]
+  k: '?'
+- p: [24, 25]
+  k: $$mdi:keyboard-esc$$
+- p: [15, 16]
+  k: $$mdi:apple-keyboard-option$$
+- p: [16, 17]
+  k: $$mdi:apple-keyboard-command$$
