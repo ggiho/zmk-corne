@@ -47,7 +47,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
   - '&td0'
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:apple-keyboard-command$$', h: SYMBOL}
+  - {t: F18, h: SYMBOL}
   - $$mdi:apple-keyboard-shift$$
   NUMBER:
   - {t: '`', s: '~'}
