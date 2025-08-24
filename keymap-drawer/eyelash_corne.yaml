@@ -24,7 +24,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - J
   - K
   - L
   - {t: ;, s: ':'}
@@ -47,8 +47,8 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: F18, h: SYMBOL}
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:apple-keyboard-command$$', h: SYMBOL}
+  - $$mdi:apple-keyboard-shift$$
   NUMBER:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
@@ -217,7 +217,3 @@ combos:
   k: '?'
 - p: [24, 25]
   k: $$mdi:keyboard-esc$$
-- p: [15, 16]
-  k: $$mdi:apple-keyboard-option$$
-- p: [16, 17]
-  k: $$mdi:apple-keyboard-command$$
