@@ -72,8 +72,9 @@
             #binding-cells = <0>;
             bindings = <&none>, <&hold_tab LEFT_SHIFT CAPSLOCK>;
         };
-        
+
         /* 더블탭일 때만 Sticky Shift 토글, 싱글탭은 무시 */
+
         td_shift_latch: td_shift_latch {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -81,12 +82,13 @@
         };
 
         // 탭: td_shift_latch, 홀드: LSHIFT  ← 한 묶음 안에 두 개!
+
         osm_hold_shift: osm_hold_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             bindings = <&td_shift_latch &kp LSHIFT>;
             tapping-term-ms = <200>;
-            quick-tap-ms    = <160>;
+            quick-tap-ms = <160>;
             flavor = "balanced";
         };
     };
@@ -170,10 +172,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q             &kp W                &kp E                    &kp R                  &kp T                                           &mmv MOVE_UP                     &kp Y      &kp U      &kp I      &kp O    &kp P     &kp NON_US_BACKSLASH
-&kp LCTRL  &homerow LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow LEFT_SHIFT F  &kp G                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z             &kp X                &kp C                    &kp V                  &kp B              &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                                                  &kp LGUI                 &lt 1 SPACE            &osm_hold_shift                                                              &kp ENTER  &lt 2 F18  &kp RSHFT
+&kp TAB    &kp Q             &kp W                &kp E                    &kp R                  &kp T                                                        &mmv MOVE_UP                     &kp Y      &kp U      &kp I      &kp O    &kp P     &kp NON_US_BACKSLASH
+&kp LCTRL  &homerow LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow LEFT_SHIFT F  &kp G                                        &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z             &kp X                &kp C                    &kp V                  &kp B                           &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                                                  &kp LGUI                 &lt 1 SPACE            &osm_hold_shift undefined CAPS                                                                &kp ENTER  &lt 2 F18  &kp RSHFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
