@@ -45,7 +45,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - '&caps_word_custom'
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: F18, h: SYMBOL}
   - $$mdi:apple-keyboard-shift$$
