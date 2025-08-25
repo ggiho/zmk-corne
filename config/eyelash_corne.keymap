@@ -73,13 +73,23 @@
             bindings = <&none>, <&hold_tab LEFT_SHIFT CAPSLOCK>;
         };
         
-        os: os {
-            compatible = "zmk,behavior-one-shot";
-            label = "OS_MOD";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            // 필요 시 파라미터(예: tapping-term-ms 등) 추가 가능
-            // tapping-term-ms = <200>;
+        /* 더블탭일 때만 Sticky Shift 토글, 싱글탭은 무시 */
+        td_shift_latch: td_shift_latch {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SHIFT_LATCH";
+            #binding-cells = <0>;
+            bindings = <&none>, <&sk LSHIFT>;
+        };
+
+        /* 홀드 = Shift, 탭 = 위 tap-dance 실행 */
+        osm_hold_shift: osm_hold_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "OSM_HOLD_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&td_shift_latch>, <&kp LSHIFT>;
+            tapping-term-ms = <200>;   /* 더블탭/탭 판정 여유가 필요하면 조정 */
+            quick-tap-ms    = <160>;
+            flavor = "balanced";
         };
     };
 
@@ -165,7 +175,7 @@
 &kp TAB    &kp Q             &kp W                &kp E                    &kp R                  &kp T                                           &mmv MOVE_UP                     &kp Y      &kp U      &kp I      &kp O    &kp P     &kp NON_US_BACKSLASH
 &kp LCTRL  &homerow LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow LEFT_SHIFT F  &kp G                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z             &kp X                &kp C                    &kp V                  &kp B              &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                                                  &kp LGUI                 &lt 1 SPACE            &os LSHIFT                                                              &kp ENTER  &lt 2 F18  &kp RSHFT
+                                                  &kp LGUI                 &lt 1 SPACE            &osm_hold_shift                                                              &kp ENTER  &lt 2 F18  &kp RSHFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
