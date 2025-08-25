@@ -76,18 +76,16 @@
         /* 더블탭일 때만 Sticky Shift 토글, 싱글탭은 무시 */
         td_shift_latch: td_shift_latch {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SHIFT_LATCH";
             #binding-cells = <0>;
             bindings = <&none>, <&sk LSHIFT>;
         };
 
-        /* 홀드 = Shift, 탭 = 위 tap-dance 실행 */
+        // 탭: td_shift_latch, 홀드: LSHIFT  ← 한 묶음 안에 두 개!
         osm_hold_shift: osm_hold_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "OSM_HOLD_SHIFT";
             #binding-cells = <0>;
-            bindings = <&td_shift_latch>, <&kp LSHIFT>;
-            tapping-term-ms = <200>;   /* 더블탭/탭 판정 여유가 필요하면 조정 */
+            bindings = <&td_shift_latch &kp LSHIFT>;
+            tapping-term-ms = <200>;
             quick-tap-ms    = <160>;
             flavor = "balanced";
         };
