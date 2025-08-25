@@ -45,7 +45,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&caps_word_custom'
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: F18, h: SYMBOL}
   - $$mdi:apple-keyboard-shift$$
@@ -219,3 +219,5 @@ combos:
   k: $$mdi:keyboard-esc$$
 - p: [14, 15]
   k: Ctl+A
+- p: [25, 26]
+  k: {t: '''', s: '"'}
