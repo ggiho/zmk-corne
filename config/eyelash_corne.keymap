@@ -72,6 +72,15 @@
             #binding-cells = <0>;
             bindings = <&none>, <&hold_tab LEFT_SHIFT CAPSLOCK>;
         };
+        
+        os: os {
+            compatible = "zmk,behavior-one-shot";
+            label = "OS_MOD";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            // 필요 시 파라미터(예: tapping-term-ms 등) 추가 가능
+            // tapping-term-ms = <200>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
