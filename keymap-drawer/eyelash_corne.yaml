@@ -45,15 +45,15 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
-  - '&caps_word_custom'
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: F18, h: SYMBOL}
-  - $$mdi:alpha-w-box$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   NUMBER:
-  - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
+  - {t: Gui+`, s: Gui+~}
+  - Gui+1
+  - {t: Gui+2, s: Gui+@}
+  - Gui+8
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -63,20 +63,20 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:alpha-w-box$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
   - $$mdi:apple-keyboard-shift$$
-  - Gui+$$mdi:arrow-left-bold$$
+  - Gui+HOME
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
+  - '{'
+  - '}'
   - $$mdi:arrow-right-bold$$
-  - Gui+$$mdi:arrow-right-bold$$
+  - Gui+END
   - PG UP
   - $$mdi:bluetooth-off$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -87,9 +87,9 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB BRI
-  - RGB BRD
   - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
   - {t: '$$mdi:transfer$$', type: trans}
@@ -179,7 +179,4 @@ combos:
   l: [SYMBOL]
 - p: [9, 10]
   k: {t: ']', s: '}'}
-  l: [SYMBOL]
-- p: [23, 9]
-  k: _
   l: [SYMBOL]
