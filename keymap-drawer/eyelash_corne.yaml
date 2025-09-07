@@ -78,7 +78,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - Gui+END
   - PG UP
-  - $$mdi:bluetooth-off$$
+  - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
