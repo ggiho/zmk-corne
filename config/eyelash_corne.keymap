@@ -198,10 +198,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)    &kp LG(NUMBER_8)  &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7            &kp N8             &kp N9     &kp N0       &trans
-&caps_word     &kp LCTRL         &kp LALT      &kp LGUI          &kp LSHFT     &kp LG(HOME)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp RIGHT  &kp RG(END)  &kp PG_UP
-&bt BT_CLR     &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &kp C_MUTE                    &mmv MOVE_DOWN                   &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none      &trans       &kp PG_DN
-                                               &trans            &trans        &trans                                                                       &trans    &kp DEL           &trans
+&kp LG(GRAVE)   &kp LG(NUMBER_1)  &kp LG(N2)    &kp LG(NUMBER_8)  &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7            &kp N8             &kp N9     &kp N0       &trans
+&caps_word      &kp LCTRL         &kp LALT      &kp LGUI          &kp LSHFT     &kp LG(HOME)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp RIGHT  &kp RG(END)  &kp PG_UP
+&bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &kp C_MUTE                    &mmv MOVE_DOWN                   &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none      &trans       &kp PG_DN
+                                                &trans            &trans        &trans                                                                       &trans    &kp DEL           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
