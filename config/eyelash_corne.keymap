@@ -169,12 +169,6 @@
             key-positions = <9 10>;
             layers = <2>;
         };
-
-        underscore {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <23 9>;
-            layers = <2>;
-        };
     };
 
     keymap {
@@ -183,10 +177,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q             &kp W                &kp E                    &kp R                  &kp T                                           &mmv MOVE_UP                     &kp Y      &kp U      &kp I       &kp O    &kp P                           &kp BACKSLASH
-&kp LCTRL  &homerow LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow LEFT_SHIFT F  &kp G                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J      &kp K       &kp L    &homerow RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z             &kp X                &kp C                    &kp V                  &kp B              &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M      &kp COMMA   &kp DOT  &kp FSLH                        &kp RSHIFT
-                                                  &kp LGUI                 &lt 1 SPACE            &caps_word_custom                                                                &kp ENTER  &lt 2 F18  &caps_word
+&kp TAB    &kp Q             &kp W                &kp E                    &kp R                  &kp T                                        &mmv MOVE_UP                     &kp Y      &kp U      &kp I      &kp O    &kp P                           &kp BACKSLASH
+&kp LCTRL  &homerow LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow LEFT_SHIFT F  &kp G                        &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J      &kp K      &kp L    &homerow RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z             &kp X                &kp C                    &kp V                  &kp B           &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH                        &kp RSHIFT
+                                                  &kp LGUI                 &lt 1 SPACE            &kp LEFT_SHIFT                                                                &kp ENTER  &lt 2 F18  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -195,10 +189,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8           &kp N9           &kp N0         &trans
-&trans      &kp LCTRL     &kp LALT      &kp LGUI      &kp LSHFT     &kp LG(LEFT)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP           &kp RIGHT        &kp RG(RIGHT)  &kp PG_UP
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp C_MUTE                    &mmv MOVE_DOWN                   &none     &none     &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans         &kp PG_DN
-                                        &trans        &trans        &trans                                                                       &trans    &kp DEL   &trans
+&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)    &kp LG(NUMBER_8)  &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7            &kp N8             &kp N9     &kp N0       &trans
+&caps_word     &kp LCTRL         &kp LALT      &kp LGUI          &kp LSHFT     &kp LG(HOME)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp RIGHT  &kp RG(END)  &kp PG_UP
+&bt BT_CLR     &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &kp C_MUTE                    &mmv MOVE_DOWN                   &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none      &trans       &kp PG_DN
+                                               &trans            &trans        &trans                                                                       &trans    &kp DEL           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
