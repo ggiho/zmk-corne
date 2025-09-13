@@ -166,18 +166,6 @@
             bindings = <&kp F18>;
             key-positions = <37 38>;
         };
-
-        left_braket {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <8 9>;
-            layers = <2>;
-        };
-
-        right_braket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <9 10>;
-            layers = <2>;
-        };
     };
 
     keymap {
@@ -186,10 +174,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q             &kp W                &kp E                    &kp R                  &kp T                                        &mmv MOVE_UP                     &kp Y      &kp U      &kp I      &kp O    &kp P                                  &kp BACKSLASH
-&kp LCTRL  &homerow LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow LEFT_SHIFT F  &kp G                        &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J      &kp K      &kp L    &homerow_RShift RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z             &kp X                &kp C                    &kp V                  &kp B           &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH                               &kp RSHIFT
-                                                  &kp LGUI                 &lt 1 SPACE            &kp LEFT_SHIFT                                                                &kp ENTER  &lt 2 F18  &none
+&kp TAB    &kp Q             &kp W                &kp E                    &kp R                  &kp T                                 &mmv MOVE_UP                     &kp Y      &kp U      &kp I      &kp O    &kp P                                  &kp BACKSLASH
+&kp LCTRL  &homerow LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow LEFT_SHIFT F  &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J      &kp K      &kp L    &homerow_RShift RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z             &kp X                &kp C                    &kp V                  &kp B    &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH                               &kp RSHIFT
+                                                  &kp LGUI                 &lt 1 SPACE            &kp TAB                                                                &kp ENTER  &lt 2 F18  &to 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -198,10 +186,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp LG(GRAVE)   &kp LG(NUMBER_1)  &kp LG(N2)    &kp LG(NUMBER_8)  &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7            &kp N8             &kp N9     &kp N0       &trans
-&caps_word      &kp LCTRL         &kp LALT      &kp LGUI          &kp LSHFT     &kp LG(HOME)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp RIGHT  &kp RG(END)  &kp PG_UP
-&bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &kp C_MUTE                    &mmv MOVE_DOWN                   &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none      &trans       &kp PG_DN
-                                                &trans            &trans        &trans                                                                       &trans    &kp DEL           &trans
+&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(NUMBER_8)  &kp LG(E)  &kp LG(LS(T))                                &mmv MOVE_UP                     &trans  &trans      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &trans
+&none          &none             &none       &none             &none      &kp LG(HOME)                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RG(END)  &trans
+&none          &kp LG(Z)         &none       &none             &none      &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans       &trans
+                                             &trans            &trans     &trans                                                                        &trans  &caps_word  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -210,13 +198,22 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp GRAVE  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                                &mmv MOVE_UP                     &kp N6     &kp N7         &kp N8        &kp N9    &kp N0        &kp PIPE
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp PLUS  &kp COLON     &kp DOUBLE_QUOTES
-&none      &none            &none        &none     &none       &mkp MB5     &none                    &mmv MOVE_DOWN                   &none      &none          &none         &none     &kp QUESTION  &none
-                                         &none     &none       &kp SPACE                                                              &kp RET    &none          &none
+&kp GRAVE  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                                &mmv MOVE_UP                     &kp N6     &kp N7         &kp N8         &kp N9            &kp N0        &kp PIPE
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET  &kp AMPERSAND  &kp ASTERISK   &kp PLUS          &kp COLON     &kp DOUBLE_QUOTES
+&none      &none            &none        &none     &none       &none        &none                    &mmv MOVE_DOWN                   &none      &none          &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &none
+                                         &none     &caps_word  &none                                                                  &none      &none          &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_3 {
+            bindings = <
+&trans          &trans        &trans        &trans        &trans        &trans                          &trans          &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE
+&trans          &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans            &trans          &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS
+                                            &trans        &trans        &trans                                          &trans  &trans  &trans
+            >;
         };
     };
 };
