@@ -186,10 +186,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LG(LS(T))                                &mmv MOVE_UP                     &trans  &trans      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &trans
-&none          &none             &none       &none      &none             &kp LG(HOME)                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RG(END)  &trans
-&none          &kp LG(Z)         &none       &none      &none             &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans       &trans
-                                             &trans     &trans            &trans                                                                        &trans  &caps_word  &trans
+&kp LG(GRAVE)   &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LG(LS(T))                                &mmv MOVE_UP                     &trans  &trans      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &trans
+&none           &none             &none       &none      &none             &kp LG(HOME)                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RG(END)  &trans
+&bt BT_CLR_ALL  &kp LG(Z)         &none       &none      &none             &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans       &trans
+                                              &trans     &trans            &trans                                                                        &trans  &caps_word  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
