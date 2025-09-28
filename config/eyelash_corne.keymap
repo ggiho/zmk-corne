@@ -164,7 +164,7 @@
 
         f18 {
             bindings = <&kp F18>;
-            key-positions = <15 16>;
+            key-positions = <17 3>;
         };
 
         Underscore {
