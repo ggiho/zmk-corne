@@ -47,7 +47,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - SYMBOL
+  - {t: F18, h: SYMBOL}
   - '3'
   NUMBER:
   - {t: Gui+`, s: Gui+~}
@@ -221,7 +221,5 @@ combos:
   k: Ctl+A
 - p: [25, 26]
   k: {t: '''', s: '"'}
-- p: [17, 16]
-  k: F18
 - p: [37, 38]
   k: _
