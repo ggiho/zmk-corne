@@ -78,7 +78,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <160>;
         };
 
         LT_LANG_FAST: LT_LANG_FAST {
@@ -187,7 +187,7 @@
 &kp TAB         &kp Q             &kp W                &kp E                    &kp R                         &kp T                                 &mmv MOVE_UP                     &kp Y      &kp U                &kp I      &kp O    &kp P                                  &kp BACKSLASH
 &kp LEFT_SHIFT  &homerow LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_RShift LEFT_SHIFT F  &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J                &kp K      &kp L    &homerow_RShift RIGHT_SHIFT SEMICOLON  &kp SQT
 &trans          &kp Z             &kp X                &kp C                    &kp V                         &kp B    &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M                &kp COMMA  &kp DOT  &kp FSLH                               &kp RSHIFT
-                                                       &kp LGUI                 &lt 1 SPACE                   &kp TAB                                                                &kp ENTER  &LT_LANG_FAST 2 F18  &mo 3
+                                                       &kp LGUI                 &LT_LANG_FAST 1 SPACE         &kp TAB                                                                &kp ENTER  &LT_LANG_FAST 2 F18  &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
