@@ -171,6 +171,7 @@
         Esc {
             bindings = <&kp ESCAPE>;
             key-positions = <24 25>;
+            layers = <0>;
         };
 
         prefix+a {
@@ -185,7 +186,7 @@
 
         Underscore {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <37 38>;
+            key-positions = <37 24>;
         };
     };
 
