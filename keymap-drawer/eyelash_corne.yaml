@@ -217,9 +217,10 @@ combos:
   k: '?'
 - p: [24, 25]
   k: $$mdi:keyboard-esc$$
+  l: [QWERTY]
 - p: [14, 15]
   k: Ctl+A
 - p: [25, 26]
   k: {t: '''', s: '"'}
-- p: [37, 38]
+- p: [37, 24]
   k: _
