@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:alpha-w-box$$
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
@@ -270,6 +270,6 @@ combos:
 - p: [14, 15]
   k: Ctl+A
 - p: [25, 26]
-  k: {t: '''', s: '"'}
+  k: '"'
 - p: [37, 24]
   k: _
