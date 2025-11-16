@@ -88,7 +88,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <80>;
+            quick-tap-ms = <100>;
         };
 
         homerow_LShift: homerow_LShift {
