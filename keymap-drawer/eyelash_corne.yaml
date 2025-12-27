@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: tmux_nav}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: F18, h: SYMBOL}
-  - {t: '0', h: '3', s: )}
+  - {t: \, h: '3'}
   NUMBER:
   - {t: Gui+`, s: Gui+~}
   - Gui+1
@@ -58,9 +58,9 @@ layers:
   - Gui+Sft+T
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - (
   - )
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -73,9 +73,9 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - _
   - '{'
   - '}'
+  - {t: '$$mdi:transfer$$', type: trans}
   - Gui+END
   - '"'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -87,9 +87,9 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -128,9 +128,9 @@ layers:
   - ':'
   - '"'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -185,7 +185,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
   - '1'
   - '2'
   - '3'
@@ -253,8 +253,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&tmux_previous_widnow'
   - {t: '$$mdi:transfer$$', type: trans}
+  - '&tmux_previous_widnow'
   - {t: '$$mdi:transfer$$', type: trans}
   - '&tmux_next_widnow'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -322,5 +322,3 @@ combos:
   k: '"'
 - p: [37, 24]
   k: _
-- p: [16, 17]
-  k: Gui+Sft+P
