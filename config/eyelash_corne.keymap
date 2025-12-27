@@ -200,6 +200,11 @@
             bindings = <&kp UNDERSCORE>;
             key-positions = <37 24>;
         };
+
+        command_p {
+            bindings = <&kp LG(LS(P))>;
+            key-positions = <16 17>;
+        };
     };
 
     macros {
