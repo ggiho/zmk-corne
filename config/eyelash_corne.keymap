@@ -266,10 +266,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LG(LS(T))                                &mmv MOVE_UP                     &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans       &trans
-&none          &kp LG(A)         &kp LG(S)   &kp LG(D)  &none             &kp LG(HOME)                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &kp RG(END)  &kp DOUBLE_QUOTES
-&trans         &kp LG(Z)         &none       &none      &none             &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans       &trans
-                                             &trans     &trans            &trans                                                                        &trans  &trans                &trans
+&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LG(LS(T))                                &mmv MOVE_UP                     &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL      &trans  &trans
+&none          &kp LG(A)         &kp LG(S)   &kp LG(D)  &none             &kp LA(LS(G))                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LG(RIGHT)  &trans  &kp DOUBLE_QUOTES
+&trans         &kp LG(Z)         &none       &none      &none             &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans         &trans  &trans
+                                             &trans     &trans            &trans                                                                        &trans        &trans                &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -298,10 +298,10 @@
 
         layer_4 {
             bindings = <
-&kp LC(ESC)  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &trans  &trans                    &trans          &trans                &trans                &trans              &trans                 &trans  &trans
-&trans       &trans            &trans            &trans            &trans  &trans            &trans  &trans  &trans  &tmux_move_pane_left  &tmux_move_pane_down  &tmux_move_pane_up  &tmux_move_pane_right  &trans  &trans
-&trans       &trans            &trans            &trans            &trans  &trans  &trans            &trans          &trans                &trans                &trans              &trans                 &trans  &trans
-                                                 &trans            &trans  &trans                                    &trans                &trans                &trans
+&kp LC(ESC)  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &trans  &trans                    &trans          &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans       &trans            &trans            &trans            &trans  &trans            &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans       &trans            &trans            &trans            &trans  &trans  &trans            &trans          &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                                                 &trans            &trans  &trans                                    &trans  &kp N0        &trans
             >;
         };
 
