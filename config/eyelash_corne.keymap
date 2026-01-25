@@ -246,6 +246,13 @@
             bindings = <&kp LC(A) &kp P>;
             label = "TMUX_PREVIOUS_WIDNOW";
         };
+
+        tmux_session_list: tmux_session_list {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp S>;
+            label = "TMUX_SESSION_LIST";
+        };
     };
 
     keymap {
@@ -257,7 +264,7 @@
 &kp ESC                         &kp Q                   &kp W                &kp E                    &kp R                         &kp T                                   &mmv MOVE_UP                     &kp Y      &kp U                &kp I       &kp O    &kp P                                  &kp BACKSLASH
 &Lshift_caps_word LEFT_SHIFT 0  &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LEFT_SHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J                &kp K       &kp L    &homerow_RShift RIGHT_SHIFT SEMICOLON  &kp SQT
 &trans                          &kp Z                   &kp X                &kp C                    &kp V                         &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M                &kp COMMA   &kp DOT  &kp FSLH                               &trans
-                                                                             &lt 4 LC(A)              &lt 1 SPACE                   &lt 5 TAB                                                                &kp ENTER  &LT_LANG_FAST 2 F18  &lt 3 PIPE
+                                                                             &lt 5 LC(A)              &lt 1 SPACE                   &lt 4 TAB                                                                &kp ENTER  &LT_LANG_FAST 2 F18  &lt 3 PIPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -289,9 +296,9 @@
 
         layer_3 {
             bindings = <
-&trans          &trans        &trans        &trans        &trans        &trans                          &trans          &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE
-&trans          &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans            &trans          &trans  &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS
+&trans          &trans        &trans        &trans        &trans        &trans                          &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                             &trans        &trans        &trans                                          &trans  &trans  &trans
             >;
         };
@@ -307,10 +314,10 @@
 
         tmux_nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans                &tmux_previous_widnow  &trans              &tmux_next_widnow      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &tmux_move_pane_left  &tmux_move_pane_down   &tmux_move_pane_up  &tmux_move_pane_right  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans                &trans                 &trans              &trans                 &trans  &trans
-                        &trans  &trans  &trans                                    &trans                &trans                 &trans
+&trans  &trans  &trans              &trans  &trans  &trans                    &trans          &trans                &tmux_previous_widnow  &trans              &tmux_next_widnow      &trans  &trans
+&trans  &trans  &tmux_session_list  &trans  &trans  &trans            &trans  &trans  &trans  &tmux_move_pane_left  &tmux_move_pane_down   &tmux_move_pane_up  &tmux_move_pane_right  &trans  &trans
+&trans  &trans  &trans              &trans  &trans  &trans  &trans            &trans          &trans                &trans                 &trans              &trans                 &trans  &trans
+                                    &trans  &trans  &trans                                    &trans                &trans                 &trans
             >;
         };
     };
