@@ -202,6 +202,16 @@
             bindings = <&kp UNDERSCORE>;
             key-positions = <37 24>;
         };
+
+        Left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <8 23>;
+        };
+
+        Right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <9 24>;
+        };
     };
 
     macros {
