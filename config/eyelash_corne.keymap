@@ -71,7 +71,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <140>;
         };
 
         LT_LANG_FAST: LT_LANG_FAST {
@@ -90,7 +90,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <140>;
             flavor = "tap-preferred";
             quick-tap-ms = <110>;
         };
@@ -258,6 +258,13 @@
             bindings = <&kp LC(A) &kp S>;
             label = "TMUX_SESSION_LIST";
         };
+
+        justfile: justfile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp J &kp ENTER>;
+            label = "JUSTFILE";
+        };
     };
 
     keymap {
@@ -281,7 +288,7 @@
 &kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LG(LS(T))                                &mmv MOVE_UP                     &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans         &trans
 &none          &kp LG(A)         &kp LG(S)   &kp LG(D)  &none             &kp LA(LS(G))                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(RIGHT)  &kp DOUBLE_QUOTES
 &trans         &kp LG(Z)         &none       &none      &none             &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans         &trans
-                                             &trans     &trans            &trans                                                                        &trans        &kp N0        &trans
+                                             &trans     &trans            &trans                                                                        &justfile     &kp N0        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
