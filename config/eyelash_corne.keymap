@@ -273,10 +273,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC                         &kp Q                    &kp W                &kp E                    &kp R                        &kp T                                   &mmv MOVE_UP                     &kp Y      &kp U                &kp I       &kp O    &kp P                                  &kp BACKSLASH
-&Lshift_caps_word LEFT_SHIFT 0  &homerow_LShift LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LCtrl LEFT_SHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J                &kp K       &kp L    &homerow_RShift RIGHT_SHIFT SEMICOLON  &kp SQT
-&trans                          &kp Z                    &kp X                &kp C                    &kp V                        &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M                &kp COMMA   &kp DOT  &kp FSLH                               &trans
-                                                                              &lt 4 LC(A)              &lt 1 SPACE                  &lt 5 TAB                                                                &kp ENTER  &LT_LANG_FAST 2 F18  &lt 3 PIPE
+&kp ESC                         &kp Q                         &kp W                &kp E                    &kp R                          &kp T                                   &mmv MOVE_UP                     &kp Y      &kp U                &kp I       &kp O    &kp P                                  &kp BACKSLASH
+&Lshift_caps_word LEFT_SHIFT 0  &homerow_LShift LEFT_SHIFT A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LCtrl LEFT_CONTROL F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J                &kp K       &kp L    &homerow_RShift RIGHT_SHIFT SEMICOLON  &kp SQT
+&trans                          &kp Z                         &kp X                &kp C                    &kp V                          &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M                &kp COMMA   &kp DOT  &kp FSLH                               &trans
+                                                                                   &lt 4 LC(A)              &lt 1 SPACE                    &lt 5 TAB                                                                &kp ENTER  &LT_LANG_FAST 2 F18  &lt 3 PIPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -285,10 +285,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LG(LS(T))                                &mmv MOVE_UP                     &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans         &trans
-&none          &kp LG(A)         &kp LG(S)   &kp LG(D)  &none             &kp LA(LS(G))                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(RIGHT)  &kp DOUBLE_QUOTES
-&trans         &kp LG(Z)         &none       &none      &none             &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans         &trans
-                                             &trans     &trans            &trans                                                                        &justfile     &kp N0        &trans
+&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)        &kp LG(LS(T))                                &mmv MOVE_UP                     &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans         &trans
+&none          &kp LG(A)         &kp LG(S)   &kp LG(D)  &kp LS(LG(DOWN_ARROW))  &kp LA(LS(G))                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(RIGHT)  &kp DOUBLE_QUOTES
+&trans         &kp LG(Z)         &none       &none      &none                   &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans         &trans
+                                             &trans     &trans                  &trans                                                                        &justfile     &kp N0        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
