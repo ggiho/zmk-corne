@@ -80,8 +80,8 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            quick-tap-ms = <130>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <140>;
         };
 
         homerow_LShift: homerow_LShift {
@@ -112,7 +112,7 @@
             bindings = <&kp>, <&caps_word>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <160>;
         };
 
         /* 더블탭일 때만 Sticky Shift 토글, 싱글탭은 무시 */
@@ -265,6 +265,20 @@
             bindings = <&kp J &kp ENTER>;
             label = "JUSTFILE";
         };
+
+        tmux_new_pane: tmux_new_pane {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp C>;
+            label = "TMUX_NEW_PANE";
+        };
+
+        tmux_new_window: tmux_new_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp T>;
+            label = "TMUX_NEW_WINDOW";
+        };
     };
 
     keymap {
@@ -326,10 +340,10 @@
 
         tmux_nav {
             bindings = <
-&trans  &trans  &trans              &trans  &trans  &trans                    &trans          &trans                &tmux_previous_widnow  &trans              &tmux_next_widnow      &trans  &trans
-&trans  &trans  &tmux_session_list  &trans  &trans  &trans            &trans  &trans  &trans  &tmux_move_pane_left  &tmux_move_pane_down   &tmux_move_pane_up  &tmux_move_pane_right  &trans  &trans
-&trans  &trans  &trans              &trans  &trans  &trans  &trans            &trans          &trans                &trans                 &trans              &trans                 &trans  &trans
-                                    &trans  &trans  &trans                                    &trans                &trans                 &trans
+&trans  &trans  &trans              &trans          &trans  &tmux_new_window                    &trans          &trans                &tmux_previous_widnow  &trans              &tmux_next_widnow      &trans  &trans
+&trans  &trans  &tmux_session_list  &trans          &trans  &trans                      &trans  &trans  &trans  &tmux_move_pane_left  &tmux_move_pane_down   &tmux_move_pane_up  &tmux_move_pane_right  &trans  &trans
+&trans  &trans  &trans              &tmux_new_pane  &trans  &trans            &trans            &trans          &trans                &trans                 &trans              &trans                 &trans  &trans
+                                    &trans          &trans  &trans                                              &trans                &trans                 &trans
             >;
         };
     };
