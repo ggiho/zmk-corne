@@ -279,6 +279,13 @@
             bindings = <&kp LC(A) &kp T>;
             label = "TMUX_NEW_WINDOW";
         };
+
+        tmux_next_session: tmux_next_session {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp RIGHT_PARENTHESIS>;
+            label = "TMUX_NEXT_SESSION";
+        };
     };
 
     keymap {
@@ -340,7 +347,7 @@
 
         tmux_nav {
             bindings = <
-&trans  &trans  &trans              &trans          &trans  &tmux_new_window                    &trans          &trans                &tmux_previous_widnow  &trans              &tmux_next_widnow      &trans  &trans
+&trans  &trans  &trans              &trans          &trans  &tmux_new_window                    &trans          &trans                &tmux_previous_widnow  &tmux_next_session  &tmux_next_widnow      &trans  &trans
 &trans  &trans  &tmux_session_list  &trans          &trans  &trans                      &trans  &trans  &trans  &tmux_move_pane_left  &tmux_move_pane_down   &tmux_move_pane_up  &tmux_move_pane_right  &trans  &trans
 &trans  &trans  &trans              &tmux_new_pane  &trans  &trans            &trans            &trans          &trans                &trans                 &trans              &trans                 &trans  &trans
                                     &trans          &trans  &trans                                              &trans                &trans                 &trans
