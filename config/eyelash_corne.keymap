@@ -71,7 +71,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <120>;
+            tapping-term-ms = <115>;
         };
 
         LT_LANG_FAST: LT_LANG_FAST {
@@ -91,7 +91,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <155>;
+            tapping-term-ms = <145>;
             flavor = "tap-preferred";
         };
 
@@ -216,34 +216,6 @@
     };
 
     macros {
-        tmux_move_pane_left: tmux_move_pane_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp H>;
-            label = "TMUX_MOVE_PANE_LEFT";
-        };
-
-        tmux_move_pane_down: tmux_move_pane_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp J>;
-            label = "TMUX_MOVE_PANE_DOWN";
-        };
-
-        tmux_move_pane_up: tmux_move_pane_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp K>;
-            label = "TMUX_MOVE_PANE_UP";
-        };
-
-        tmux_move_pane_right: tmux_move_pane_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp L>;
-            label = "TMUX_MOVE_PANE_RIGHT";
-        };
-
         tmux_next_widnow: tmux_next_widnow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -312,9 +284,9 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)        &kp LG(LS(T))                                &mmv MOVE_UP                     &trans     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans     &trans
-&none          &kp LG(A)         &kp LG(S)   &kp LG(D)  &kp LS(LG(DOWN_ARROW))  &kp LA(LS(G))                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON  &trans
-&trans         &kp LG(Z)         &none       &none      &none                   &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
+&kp LG(GRAVE)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(E)  &kp LG(NUMBER_8)        &kp LG(LS(T))                                &mmv MOVE_UP                     &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans     &trans
+&none          &kp LG(A)         &kp LG(S)   &kp LG(D)  &kp LS(LG(DOWN_ARROW))  &kp LA(LS(G))                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON  &trans
+&trans         &kp LG(Z)         &none       &none      &none                   &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
                                              &trans     &trans                  &trans                                                                        &justfile  &kp N0        &trans
             >;
 
@@ -353,10 +325,10 @@
 
         tmux_nav {
             bindings = <
-&trans  &trans  &trans              &trans          &trans  &tmux_new_window                    &trans          &trans                &tmux_previous_widnow  &tmux_next_session  &tmux_next_widnow      &trans  &trans
-&trans  &trans  &tmux_session_list  &trans          &trans  &trans                      &trans  &trans  &trans  &tmux_move_pane_left  &tmux_move_pane_down   &tmux_move_pane_up  &tmux_move_pane_right  &trans  &trans
-&trans  &trans  &trans              &tmux_new_pane  &trans  &trans            &trans            &trans          &trans                &trans                 &trans              &trans                 &trans  &trans
-                                    &trans          &trans  &trans                                              &trans                &trans                 &trans
+&trans  &trans  &trans              &trans          &trans  &tmux_new_window                    &trans          &trans  &tmux_previous_widnow  &tmux_next_session  &tmux_next_widnow  &trans  &trans
+&trans  &trans  &tmux_session_list  &trans          &trans  &trans                      &trans  &trans  &trans  &trans  &trans                 &trans              &trans             &trans  &trans
+&trans  &trans  &trans              &tmux_new_pane  &trans  &trans            &trans            &trans          &trans  &trans                 &trans              &trans             &trans  &trans
+                                    &trans          &trans  &trans                                              &trans  &trans                 &trans
             >;
         };
     };
